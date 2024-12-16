@@ -1,0 +1,36 @@
+{
+    "lists": [
+        {
+            "name": "Lista de Compras",
+            "description": "Cosas para comprar en el supermercado",
+            "tasks": [
+                {
+                    "title": "Comprar leche",
+                    "description": "Leche descremada",
+                    "completed": false
+                },
+                {
+                    "title": "Comprar pan",
+                    "description": "Pan integral",
+                    "completed": true
+                }
+            ]
+        },
+        {
+            "name": "Tareas de la Casa",
+            "description": "Cosas para hacer en casa",
+            "tasks": [
+                {
+                    "title": "Limpiar la cocina",
+                    "description": "Usar el nuevo detergente",
+                    "completed": false
+                },
+                {
+                    "title": "Lavar la ropa",
+                    "description": "Ropa blanca y de color por separado",
+                    "completed": false
+                }
+            ]
+        }
+    ]
+}

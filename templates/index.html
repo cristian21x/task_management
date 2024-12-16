@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Listas de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Listas de Tareas</h1>
+        
+        <div class="actions-container">
+            <div class="input-group">
+                <input type="text" id="newListName" placeholder="Nombre de la nueva lista">
+                <button id="newListBtn">Nueva Lista</button>
+            </div>
+            
+            <div class="file-actions">
+                <div class="file-input-group">
+                    <input type="file" id="importInput" accept=".json" class="file-input" onchange="updateFileName()">
+                    <label for="importInput" id="fileInputLabel" class="file-input-label">Seleccionar archivo</label>
+                    <button id="importBtn" onclick="importData()">Importar Datos</button>
+                </div>
+                <button id="exportBtn" onclick="exportData()">Exportar Datos</button>
+            </div>
+        </div>
+
+        <div id="listContainer">
+            <!-- Example of list rendering -->
+            <div class="list">
+                <h2>Nombre de la Lista</h2>
+                <button onclick="updateList(list.id)" class="list-update-btn">Actualizar Lista</button>
+                <button onclick="deleteList(list.id)" class="task-delete-btn">Eliminar Lista</button>
+                <div class="tasks">
+                    <div class="task">
+                        <input type="checkbox" onclick="toggleTask(task.id)">
+                        <span>Título de la Tarea</span>
+                        <span class="separator"> - </span>
+                        <span class="description">Descripción de la Tarea</span>
+                        <button onclick="updateTask(task.id)" class="task-update-btn">Actualizar</button>
+                        <button onclick="deleteTask(task.id)" class="task-delete-btn">Eliminar</button>
+                    </div>
+                </div>
+                <input type="text" placeholder="Nueva tarea" onkeypress="addTask(event, list.id)">
+            </div>
+        </div>
+        <div id="taskContainer"></div>
+    </div>
+    <script src="{{ url_for('static', path='/js/script.js') }}"></script>
+</body>
+</html>
