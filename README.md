@@ -1,4 +1,4 @@
-# Gestor de Listas de Tareas
+# Gestor de Tareas
 
 Este proyecto es una aplicación web para gestionar tareas, desarrollada con FastAPI y PostgreSQL. Permite crear, actualizar, eliminar e importar/exportar listas de tareas y sus tareas asociadas.
 
@@ -47,12 +47,7 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
    - Crea una base de datos llamada `task_list`.
    - Actualiza la URL de la base de datos en `database.py` si es necesario.
 
-5. **Ejecutar migraciones**:
-   ```bash
-   # Asegúrate de que las migraciones estén configuradas si usas Alembic o similar
-   ```
-
-6. **Iniciar la aplicación**:
+5. **Iniciar la aplicación**:
    ```bash
    uvicorn main:app --reload
    ```
