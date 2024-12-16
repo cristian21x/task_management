@@ -19,9 +19,8 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
 
 ## Requisitos Previos
 
-- Python 3.8+
+- Python 3.11+
 - PostgreSQL
-- Node.js (para gestionar dependencias de frontend si es necesario)
 
 ## Instalación
 
@@ -57,6 +56,7 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
 - Accede a la aplicación en `http://localhost:8000`.
 - Usa la interfaz para gestionar tus listas y tareas.
 - Importa o exporta datos desde la sección correspondiente.
+- La documentación de los endpoints está disponible en `http://localhost:8000/docs` con Swagger.
 
 ## Contribuciones
 
