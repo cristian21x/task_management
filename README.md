@@ -63,10 +63,8 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
 Aquí puedes incluir capturas de pantalla del frontend y su funcionamiento. Asegúrate de que las imágenes estén en un directorio accesible, como `img/`, y enlázalas aquí.
 
 ![Vista Principal](img/main_view.png)
-*Descripción de la vista principal.*
 
 ![Gestión de Tareas](img/task_management.png)
-*Descripción de la gestión de tareas.*
 
 ## Documentación de Endpoints
 
