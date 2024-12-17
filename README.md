@@ -26,7 +26,7 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/tu_usuario/tu_repositorio.git](https://github.com/cristian21x/task_management.git
    cd tu_repositorio
    ```
 
