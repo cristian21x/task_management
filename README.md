@@ -58,6 +58,39 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
 - Importa o exporta datos desde la sección correspondiente.
 - La documentación de los endpoints está disponible en `http://localhost:8000/docs` con Swagger.
 
+## Imágenes del Frontend
+
+Aquí puedes incluir capturas de pantalla del frontend y su funcionamiento. Asegúrate de que las imágenes estén en un directorio accesible, como `img/`, y enlázalas aquí.
+
+![Vista Principal](img/main_view.png)
+*Descripción de la vista principal.*
+
+![Gestión de Tareas](img/task_management.png)
+*Descripción de la gestión de tareas.*
+
+## Documentación de Endpoints
+
+La documentación completa de los endpoints está disponible en `http://localhost:8000/docs` a través de Swagger.
+
+### Listas
+
+- **GET /lists**: Obtiene todas las listas de tareas.
+- **POST /lists**: Crea una nueva lista de tareas.
+- **PUT /lists/{list_id}**: Actualiza una lista de tareas existente.
+- **DELETE /lists/{list_id}**: Elimina una lista de tareas.
+
+### Tareas
+
+- **GET /tasks**: Obtiene todas las tareas.
+- **POST /tasks**: Crea una nueva tarea.
+- **PUT /tasks/{task_id}**: Actualiza una tarea existente.
+- **DELETE /tasks/{task_id}**: Elimina una tarea.
+
+### Archivos
+
+- **POST /import**: Importa datos de listas y tareas desde un archivo JSON.
+- **GET /export**: Exporta datos de listas y tareas a un archivo JSON.
+
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, sigue los pasos estándar de GitHub para contribuir.
@@ -65,4 +98,3 @@ Las contribuciones son bienvenidas. Por favor, sigue los pasos estándar de GitH
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-
