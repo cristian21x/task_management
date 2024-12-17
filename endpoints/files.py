@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Depends, UploadFile, File
 from sqlalchemy.orm import Session, joinedload
-from models import List, Task
-from database import get_db
+from models.models import List, Task
+from db.database import get_db
 from fastapi.responses import JSONResponse
 import json
 
@@ -10,6 +10,19 @@ router = APIRouter()
 
 @router.post("/import")
 async def import_data(file: UploadFile = File(...), db: Session = Depends(get_db)):
+    """
+    Import data from a JSON file and store it in the database.
+
+    Args:
+        file (UploadFile): The uploaded JSON file containing lists and tasks.
+        db (Session): Database session dependency.
+
+    Returns:
+        dict: A message indicating successful data import.
+
+    Raises:
+        HTTPException: If an error occurs during the import process.
+    """
     try:
         content = await file.read()
         data = json.loads(content)
@@ -35,8 +48,21 @@ async def import_data(file: UploadFile = File(...), db: Session = Depends(get_db
         db.rollback()
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @router.get("/export", response_class=JSONResponse)
 async def export_data(db: Session = Depends(get_db)):
+    """
+    Export all lists and their tasks from the database to a JSON response.
+
+    Args:
+        db (Session): Database session dependency.
+
+    Returns:
+        JSONResponse: A JSON response containing all lists and their tasks.
+
+    Raises:
+        HTTPException: If an error occurs during the export process.
+    """
     try:
         lists = db.query(List).options(joinedload(List.tasks)).all()
         data = {

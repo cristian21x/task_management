@@ -58,13 +58,11 @@ Este proyecto es una aplicación web para gestionar tareas, desarrollada con Fas
 - Importa o exporta datos desde la sección correspondiente.
 - La documentación de los endpoints está disponible en `http://localhost:8000/docs` con Swagger.
 
-## Imágenes del Frontend
+## Video del Frontend
 
-Aquí puedes incluir capturas de pantalla del frontend y su funcionamiento. Asegúrate de que las imágenes estén en un directorio accesible, como `img/`, y enlázalas aquí.
+Aquí hay un video que muestra el funcionamiento de la aplicación:
 
-![Vista Principal](img/main_view.png)
-
-![Gestión de Tareas](img/task_management.png)
+[![Video de Importación](https://img.youtube.com/vi/RWZQYbK8EOk/0.jpg)](https://youtu.be/RWZQYbK8EOk)
 
 ## Documentación de Endpoints
 

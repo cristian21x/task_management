@@ -18,6 +18,19 @@ app.include_router(files_router)
 
 @app.get("/", response_class=HTMLResponse)
 async def get_tasks_view(request: Request):
+    """
+    Render the main tasks view.
+
+    This endpoint serves the main HTML page for the application, rendering
+    the "index.html" template. It provides the request context to the template
+    for rendering dynamic content.
+
+    Args:
+        request (Request): The request object containing request data.
+
+    Returns:
+        TemplateResponse: An HTML response with the rendered template.
+    """
     return templates.TemplateResponse(
         "index.html",
         {"request": request}
